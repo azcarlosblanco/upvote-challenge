@@ -1,12 +1,10 @@
 import './App.css'
 import UpVote from './components/UpVote'
 
-function App() {
+export default function App() {
   return (
-      <div className='app-container'>
-        <UpVote />
-      </div>
+    <main className='app-container'>
+      <UpVote />
+    </main>
   )
 }
-
-export default App
