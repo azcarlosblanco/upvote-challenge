@@ -6,7 +6,7 @@ export default function UpVote({ votes, setVotes }: UpVoteProps) {
 
     return votes.map((vote, index) => (
         <div key={`vote-${index}`} className="upvote-container">
-            <UpVoteList {...vote} />
+            <UpVoteList {...vote} setVotes={setVotes} index={index} />
             <UpVoteButton setVotes={setVotes} index={index} />
         </div>
     ))    

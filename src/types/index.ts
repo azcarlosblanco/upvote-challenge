@@ -12,9 +12,10 @@ export type UpVoteProps = {
     setVotes: Dispatch<SetStateAction<Votes>>;
 }
 
-export type UpVoteListProps = Vote;
-
 export type UpVoteButtonProps = {
     setVotes: Dispatch<SetStateAction<Votes>>;
     index: number;
 }
+
+export type UpVoteListProps = Vote & UpVoteButtonProps;
+

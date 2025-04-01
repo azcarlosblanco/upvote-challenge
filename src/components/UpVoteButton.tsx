@@ -1,4 +1,5 @@
 import { UpVoteButtonProps } from "../types";
+import { FaPlus } from "react-icons/fa";
 
 export default function UpVoteButton({ setVotes, index }: UpVoteButtonProps) {
     const onIncrement = () => setVotes(prev => prev.map((vote, i) => {
@@ -10,6 +11,8 @@ export default function UpVoteButton({ setVotes, index }: UpVoteButtonProps) {
     }))
 
     return (
-        <button onClick={onIncrement}>plus-sign</button>
+        <button className="upvote-button" onClick={onIncrement}>
+            <FaPlus />
+        </button>
     )
 }
