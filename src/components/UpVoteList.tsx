@@ -6,7 +6,11 @@ export default function UpVoteList({ count, selected, index }: UpVoteListProps) 
     const { onSelect } = useUpVotes();
     
     return (
-        <ul className={`upvote-list ${selected ? 'selected' : ''}`} onClick={() => onSelect(index)}>
+        <ul 
+            role="list"
+            className={`upvote-list ${selected ? 'selected' : ''}`} 
+            onClick={() => onSelect(index)}
+        >
             {[...Array(count)].map((_, index) => (
                 <li key={`item-${index}`}>
                     <FaArrowUp />
