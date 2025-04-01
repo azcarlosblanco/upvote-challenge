@@ -1,19 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Votes } from './types'
+import UpVote from './components/UpVote'
 
 function App() {
-  const [votes, setVotes] = useState([
-    {
-      count: 0,
-      selected: false
-    }
+  const [votes, setVotes] = useState<Votes>([
+    { count: 0, selected: false},
+    { count: 0, selected: false},
+    { count: 0, selected: false},
   ])
 
   return (
       <div className='app-container'>
-        <UpVote />
+        <UpVote votes={votes} setVotes ={setVotes}/>
       </div>
   )
 }
