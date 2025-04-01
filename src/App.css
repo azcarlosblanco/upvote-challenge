@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 80rem;  
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -10,17 +10,19 @@ body {
 }
 
 .app-container {
-  padding: 30px;
+  padding: 1.88rem;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0.65rem;
 }
 
 .upvote-container {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  width: 700px;
-  gap: 10px;
+  padding: 1.25rem;
+  width: 43.75rem;
+  gap: 1rem;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .upvote-list {
@@ -28,44 +30,59 @@ body {
   flex-direction: row;
   gap: 1rem;
   margin: 0;
-  min-height: 60px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #c8c8c8;
+  height: 5.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.06rem solid #e0e0e0;
   width: 100%;
-  margin-right: 10px;
-  overflow: auto;
+  margin-right: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
   list-style: none;
+  transition: all 0.2s ease;
 }
 
 .upvote-list.selected li {
   background-color: #E5E8FD;
-
 }
 
 .upvote-list.selected li svg {
   color: #253CF2;
 }
 
-
 .upvote-list li {
   background-color: #F4F6F8;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 2.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease;
+}
+
+.upvote-list li:hover {
+  background-color: #E8EAF0;
+  transform: translateY(-0.1rem);
 }
 
 .upvote-list li svg {
   color: #343A40;
 }
 
-
 .upvote-button {
   background-color: #F4F6F8;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 2.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upvote-button:hover {
+  background-color: #E8EAF0;
+  transform: translateY(-0.1rem);
 }
