@@ -1,6 +1,6 @@
 import { UpVoteListProps } from "../types";
-import { FaArrowUp } from "react-icons/fa";
 import { useUpVotes } from "../hooks/useUpVotes";
+import UpVoteArrow from "./UpVoteArrow";
 
 export default function UpVoteList({ count, selected, index }: UpVoteListProps) {
     const { onSelect } = useUpVotes();
@@ -10,11 +10,13 @@ export default function UpVoteList({ count, selected, index }: UpVoteListProps) 
             role="list"
             className={`upvote-list ${selected ? 'selected' : ''}`} 
             onClick={() => onSelect(index)}
+            aria-label="Upvote list"
         >
-            {[...Array(count)].map((_, index) => (
-                <li key={`item-${index}`}>
-                    <FaArrowUp />
-                </li>
+            {[...Array(count)].map((_, arrowIndex) => (
+                <UpVoteArrow 
+                    key={`arrow-${arrowIndex}`}
+                    index={arrowIndex}
+                />
             ))}
         </ul>
     );
